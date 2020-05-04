@@ -22,8 +22,12 @@
     
     isOnTop = is_on_top;
     
-    if (!initialized) {
+    if (!initialized || (!bannerId.length)) {
         return;
+    }
+    else{
+        NSLog(@"banner will load with the banner id");
+        NSLog(bannerId);
     }
     
 
@@ -147,7 +151,6 @@
     if (bannerView == nil || !initialized) {
         return;
     }
- 
     [bannerView setHidden:YES];
     [bannerView removeFromSuperview];
     adUnitId = bannerView.adUnitID;
@@ -163,16 +166,24 @@
     if (bannerView == nil) {
         [self loadBanner:adUnitId:isOnTop];
     }
-    [bannerView setHidden:NO];
+    if (bannerView != nil){
+       [bannerView setHidden:NO];
+   }
 }
 
 - (void) resize {
-    NSLog(@"Calling resize");
-    NSString* currentAdUnitId = bannerView.adUnitID;
-    [self hideBanner];
-    [bannerView removeFromSuperview];
-    bannerView = nil;
-    [self loadBanner:currentAdUnitId:isOnTop];
+    NSLog(@"Calling resize banner");
+    if (bannerView != nil){
+        NSString* currentAdUnitId = bannerView.adUnitID;
+        [self hideBanner];
+        [bannerView removeFromSuperview];
+        bannerView = nil;
+        [self loadBanner:currentAdUnitId:isOnTop];
+        NSLog(@"Resize called sucessful");
+    }
+    else{
+        NSLog(@"Resize banner doesnt happen, because was not loaded");
+    }
 }
 
 - (int) getBannerWidth {
