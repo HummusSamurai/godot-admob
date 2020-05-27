@@ -34,7 +34,8 @@ If you don't want or can't build the template by yourself, you can find a precom
 			- Internet
 ### iOS
 - Drop the "admob" directory inside the "modules" directory on the Godot source;
-- Download and extract the [Google Mobile Ads SDK](https://developers.google.com/admob/ios/download) **(<= 7.41.0)** inside the directory "admob/ios/lib"; (If you are unable to download the version informed above, you can alternatively download it through [Cocoapods](https://cocoapods.org/#install) or [HERE](https://srv-file6.gofile.io/download/iLaAUS/GoogleMobileAds_framework_7_41_0.zip))
+- Download and extract the [Google Mobile Ads SDK](https://developers.google.com/admob/ios/download) **(>= 7.60.0)** inside the directory "admob/ios/lib"; (If you are unable to download the version informed above, you can alternatively download it through [Cocoapods](https://cocoapods.org/#install) or [HERE](https://srv-file6.gofile.io/download/iLaAUS/GoogleMobileAds_framework_7_41_0.zip))
+- Follow the [instructions provided by Google](https://developers.google.com/admob/ios/quick-start#update_your_infoplist) to add the GADApplicationIdentifier to your Info.plist in XCode. It is not necessary to add the frameworks to your XCode project, as they will be compiled and linked into the godot engine directly.
 - [Recompile the iOS export template](http://docs.godotengine.org/en/stable/development/compiling/compiling_for_ios.html). (If you get some error, check this [issue](https://github.com/kloder-games/godot-admob/issues/87))
 
 Configuring your game
