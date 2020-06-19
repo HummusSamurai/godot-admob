@@ -58,7 +58,12 @@ Just make sure you're using your custom template (compiled in the previous step)
 #### Godot 3
 - Export your project from Godot, it'll create an Xcode project;
 - Copy the library (.a) you have compiled following the official documentation inside the exported Xcode project. You must override the 'your_project_name.a' file with this file.
-- Copy the GoogleMobileAds.framework inside the exported Xcode project folder and link it using the "Link Binary with Libraries" option;
+- Copy the following frameworks inside the exported Xcode project folder and link it using the "Link Binary with Libraries" option. In the case of xcframework, framework folder exists in the folder like `GoogleUtilities.xcframework/ios-armv7_arm64/GoogleUtilities.framework`;
+	- GoogleMobileAds.framework
+	- GoogleAppMeasurement.framework
+	- GoogleUtilities.framework
+	- PromisesObjC.framework
+	- nanopb.framework
 - Add the following frameworks to the project:
 	- StoreKit
 	- GameKit
