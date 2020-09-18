@@ -74,6 +74,8 @@ Just make sure you're using your custom template (compiled in the previous step)
 	- CFNetwork
 	- MobileCoreServices
 	- SQLite (libsqlite3.0.tbd)
+- If you are using the version 7.65.0 >=, then also add this framework?
+	- JavaScriptCore
 - Add the -ObjC linker flag to Other Linker Flags in your project's build settings:
 ![-ObjC](https://developers.google.com/admob/images/ios/objc_linker_flag.png)
 - Update your GAMENAME-Info.plist file, add a GADApplicationIdentifier key with a string value of your [AdMob app ID](https://support.google.com/admob/answer/7356431):
