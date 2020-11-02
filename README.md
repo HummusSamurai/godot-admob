@@ -56,6 +56,7 @@ Follow the [exporting to iOS official documentation](http://docs.godotengine.org
 Just make sure you're using your custom template (compiled in the previous step), for that  rename it to "godot_opt.iphone" and replace the file with same name inside the Xcode project.
 
 #### Godot 3
+- Tutorial: https://www.youtube.com/watch?v=s5sNrOM3Oeo
 - Export your project from Godot, it'll create an Xcode project;
 - Copy the library (.a) you have compiled following the official documentation inside the exported Xcode project. You must override the 'your_project_name.a' file with this file.
 - Copy the following frameworks inside the exported Xcode project folder and link it using the "Link Binary with Libraries" option. In the case of xcframework, framework folder exists in the folder like `GoogleUtilities.xcframework/ios-armv7_arm64/GoogleUtilities.framework`;
